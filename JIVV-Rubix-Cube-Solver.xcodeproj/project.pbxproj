@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BDD10618B103A81687D40844 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A663C1DF33906A6134EBE11 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E51AACF91BB71B0D001E4931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51AACF81BB71B0D001E4931 /* AppDelegate.swift */; };
 		E51AACFB1BB71B0D001E4931 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51AACFA1BB71B0D001E4931 /* ViewController.swift */; };
 		E51AACFE1BB71B0D001E4931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51AACFC1BB71B0D001E4931 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		E51AAD061BB71B0D001E4931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51AAD041BB71B0D001E4931 /* LaunchScreen.storyboard */; };
 		E51AAD111BB71B0D001E4931 /* JIVV_Rubix_Cube_SolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51AAD101BB71B0D001E4931 /* JIVV_Rubix_Cube_SolverTests.swift */; };
 		E51AAD1C1BB71B0D001E4931 /* JIVV_Rubix_Cube_SolverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51AAD1B1BB71B0D001E4931 /* JIVV_Rubix_Cube_SolverUITests.swift */; };
+		E5E5217F1BB724F300C77B89 /* Standards.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E5217E1BB724F300C77B89 /* Standards.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A663C1DF33906A6134EBE11 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FB5F6EF3714C2E46AE60C11 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A95A0FBA1928212025E6AB73 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E51AACF51BB71B0D001E4931 /* JIVV-Rubix-Cube-Solver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JIVV-Rubix-Cube-Solver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E51AACF81BB71B0D001E4931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E51AACFA1BB71B0D001E4931 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +54,7 @@
 		E51AAD171BB71B0D001E4931 /* JIVV-Rubix-Cube-SolverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JIVV-Rubix-Cube-SolverUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E51AAD1B1BB71B0D001E4931 /* JIVV_Rubix_Cube_SolverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JIVV_Rubix_Cube_SolverUITests.swift; sourceTree = "<group>"; };
 		E51AAD1D1BB71B0D001E4931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5E5217E1BB724F300C77B89 /* Standards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Standards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD10618B103A81687D40844 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E631DB8F9630F1DDAA16EE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A663C1DF33906A6134EBE11 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AED4B778868B0D5D999E3E1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A95A0FBA1928212025E6AB73 /* Pods.debug.xcconfig */,
+				6FB5F6EF3714C2E46AE60C11 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E51AACEC1BB71B0C001E4931 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +107,8 @@
 				E51AAD0F1BB71B0D001E4931 /* JIVV-Rubix-Cube-SolverTests */,
 				E51AAD1A1BB71B0D001E4931 /* JIVV-Rubix-Cube-SolverUITests */,
 				E51AACF61BB71B0D001E4931 /* Products */,
+				AED4B778868B0D5D999E3E1A /* Pods */,
+				3E631DB8F9630F1DDAA16EE6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +127,7 @@
 			children = (
 				E51AACF81BB71B0D001E4931 /* AppDelegate.swift */,
 				E51AACFA1BB71B0D001E4931 /* ViewController.swift */,
+				E5E5217E1BB724F300C77B89 /* Standards.swift */,
 				E51AACFC1BB71B0D001E4931 /* Main.storyboard */,
 				E51AAD021BB71B0D001E4931 /* Assets.xcassets */,
 				E51AAD041BB71B0D001E4931 /* LaunchScreen.storyboard */,
@@ -135,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E51AAD201BB71B0D001E4931 /* Build configuration list for PBXNativeTarget "JIVV-Rubix-Cube-Solver" */;
 			buildPhases = (
+				0C517BCA54C1A27EACFE3755 /* Check Pods Manifest.lock */,
 				E51AACF11BB71B0C001E4931 /* Sources */,
 				E51AACF21BB71B0C001E4931 /* Frameworks */,
 				E51AACF31BB71B0C001E4931 /* Resources */,
+				D0AC8A1508756A05D77F7892 /* Embed Pods Frameworks */,
+				D57CA444593C0D3308F376AA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +283,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C517BCA54C1A27EACFE3755 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D0AC8A1508756A05D77F7892 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D57CA444593C0D3308F376AA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E51AACF11BB71B0C001E4931 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -260,6 +338,7 @@
 			files = (
 				E51AACFB1BB71B0D001E4931 /* ViewController.swift in Sources */,
 				E51AAD011BB71B0D001E4931 /* JIVV_Rubix_Cube_Solver.xcdatamodeld in Sources */,
+				E5E5217F1BB724F300C77B89 /* Standards.swift in Sources */,
 				E51AACF91BB71B0D001E4931 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +477,7 @@
 		};
 		E51AAD211BB71B0D001E4931 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A95A0FBA1928212025E6AB73 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "JIVV-Rubix-Cube-Solver/Info.plist";
@@ -409,6 +489,7 @@
 		};
 		E51AAD221BB71B0D001E4931 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FB5F6EF3714C2E46AE60C11 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "JIVV-Rubix-Cube-Solver/Info.plist";
@@ -485,6 +566,7 @@
 				E51AAD221BB71B0D001E4931 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E51AAD231BB71B0D001E4931 /* Build configuration list for PBXNativeTarget "JIVV-Rubix-Cube-SolverTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +575,7 @@
 				E51AAD251BB71B0D001E4931 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E51AAD261BB71B0D001E4931 /* Build configuration list for PBXNativeTarget "JIVV-Rubix-Cube-SolverUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +584,7 @@
 				E51AAD281BB71B0D001E4931 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
