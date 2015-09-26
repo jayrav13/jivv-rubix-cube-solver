@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E51AACF91BB71B0D001E4931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51AACF81BB71B0D001E4931 /* AppDelegate.swift */; };
+		E51AACFB1BB71B0D001E4931 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51AACFA1BB71B0D001E4931 /* ViewController.swift */; };
+		E51AACFE1BB71B0D001E4931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51AACFC1BB71B0D001E4931 /* Main.storyboard */; };
+		E51AAD011BB71B0D001E4931 /* JIVV_Rubix_Cube_Solver.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E51AACFF1BB71B0D001E4931 /* JIVV_Rubix_Cube_Solver.xcdatamodeld */; };
+		E51AAD031BB71B0D001E4931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E51AAD021BB71B0D001E4931 /* Assets.xcassets */; };
+		E51AAD061BB71B0D001E4931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51AAD041BB71B0D001E4931 /* LaunchScreen.storyboard */; };
+		E51AAD111BB71B0D001E4931 /* JIVV_Rubix_Cube_SolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51AAD101BB71B0D001E4931 /* JIVV_Rubix_Cube_SolverTests.swift */; };
+		E51AAD1C1BB71B0D001E4931 /* JIVV_Rubix_Cube_SolverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51AAD1B1BB71B0D001E4931 /* JIVV_Rubix_Cube_SolverUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E51AAD0D1BB71B0D001E4931 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E51AACED1BB71B0C001E4931 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E51AACF41BB71B0C001E4931;
+			remoteInfo = "JIVV-Rubix-Cube-Solver";
+		};
+		E51AAD181BB71B0D001E4931 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E51AACED1BB71B0C001E4931 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E51AACF41BB71B0C001E4931;
+			remoteInfo = "JIVV-Rubix-Cube-Solver";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E51AACF51BB71B0D001E4931 /* JIVV-Rubix-Cube-Solver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JIVV-Rubix-Cube-Solver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E51AACF81BB71B0D001E4931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E51AACFA1BB71B0D001E4931 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E51AACFD1BB71B0D001E4931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E51AAD001BB71B0D001E4931 /* JIVV_Rubix_Cube_Solver.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JIVV_Rubix_Cube_Solver.xcdatamodel; sourceTree = "<group>"; };
+		E51AAD021BB71B0D001E4931 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E51AAD051BB71B0D001E4931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E51AAD071BB71B0D001E4931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E51AAD0C1BB71B0D001E4931 /* JIVV-Rubix-Cube-SolverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JIVV-Rubix-Cube-SolverTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E51AAD101BB71B0D001E4931 /* JIVV_Rubix_Cube_SolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JIVV_Rubix_Cube_SolverTests.swift; sourceTree = "<group>"; };
+		E51AAD121BB71B0D001E4931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E51AAD171BB71B0D001E4931 /* JIVV-Rubix-Cube-SolverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JIVV-Rubix-Cube-SolverUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E51AAD1B1BB71B0D001E4931 /* JIVV_Rubix_Cube_SolverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JIVV_Rubix_Cube_SolverUITests.swift; sourceTree = "<group>"; };
+		E51AAD1D1BB71B0D001E4931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E51AACF21BB71B0C001E4931 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E51AAD091BB71B0D001E4931 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E51AAD141BB71B0D001E4931 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E51AACEC1BB71B0C001E4931 = {
+			isa = PBXGroup;
+			children = (
+				E51AACF71BB71B0D001E4931 /* JIVV-Rubix-Cube-Solver */,
+				E51AAD0F1BB71B0D001E4931 /* JIVV-Rubix-Cube-SolverTests */,
+				E51AAD1A1BB71B0D001E4931 /* JIVV-Rubix-Cube-SolverUITests */,
+				E51AACF61BB71B0D001E4931 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E51AACF61BB71B0D001E4931 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E51AACF51BB71B0D001E4931 /* JIVV-Rubix-Cube-Solver.app */,
+				E51AAD0C1BB71B0D001E4931 /* JIVV-Rubix-Cube-SolverTests.xctest */,
+				E51AAD171BB71B0D001E4931 /* JIVV-Rubix-Cube-SolverUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E51AACF71BB71B0D001E4931 /* JIVV-Rubix-Cube-Solver */ = {
+			isa = PBXGroup;
+			children = (
+				E51AACF81BB71B0D001E4931 /* AppDelegate.swift */,
+				E51AACFA1BB71B0D001E4931 /* ViewController.swift */,
+				E51AACFC1BB71B0D001E4931 /* Main.storyboard */,
+				E51AAD021BB71B0D001E4931 /* Assets.xcassets */,
+				E51AAD041BB71B0D001E4931 /* LaunchScreen.storyboard */,
+				E51AAD071BB71B0D001E4931 /* Info.plist */,
+				E51AACFF1BB71B0D001E4931 /* JIVV_Rubix_Cube_Solver.xcdatamodeld */,
+			);
+			path = "JIVV-Rubix-Cube-Solver";
+			sourceTree = "<group>";
+		};
+		E51AAD0F1BB71B0D001E4931 /* JIVV-Rubix-Cube-SolverTests */ = {
+			isa = PBXGroup;
+			children = (
+				E51AAD101BB71B0D001E4931 /* JIVV_Rubix_Cube_SolverTests.swift */,
+				E51AAD121BB71B0D001E4931 /* Info.plist */,
+			);
+			path = "JIVV-Rubix-Cube-SolverTests";
+			sourceTree = "<group>";
+		};
+		E51AAD1A1BB71B0D001E4931 /* JIVV-Rubix-Cube-SolverUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E51AAD1B1BB71B0D001E4931 /* JIVV_Rubix_Cube_SolverUITests.swift */,
+				E51AAD1D1BB71B0D001E4931 /* Info.plist */,
+			);
+			path = "JIVV-Rubix-Cube-SolverUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E51AACF41BB71B0C001E4931 /* JIVV-Rubix-Cube-Solver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E51AAD201BB71B0D001E4931 /* Build configuration list for PBXNativeTarget "JIVV-Rubix-Cube-Solver" */;
+			buildPhases = (
+				E51AACF11BB71B0C001E4931 /* Sources */,
+				E51AACF21BB71B0C001E4931 /* Frameworks */,
+				E51AACF31BB71B0C001E4931 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JIVV-Rubix-Cube-Solver";
+			productName = "JIVV-Rubix-Cube-Solver";
+			productReference = E51AACF51BB71B0D001E4931 /* JIVV-Rubix-Cube-Solver.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E51AAD0B1BB71B0D001E4931 /* JIVV-Rubix-Cube-SolverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E51AAD231BB71B0D001E4931 /* Build configuration list for PBXNativeTarget "JIVV-Rubix-Cube-SolverTests" */;
+			buildPhases = (
+				E51AAD081BB71B0D001E4931 /* Sources */,
+				E51AAD091BB71B0D001E4931 /* Frameworks */,
+				E51AAD0A1BB71B0D001E4931 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E51AAD0E1BB71B0D001E4931 /* PBXTargetDependency */,
+			);
+			name = "JIVV-Rubix-Cube-SolverTests";
+			productName = "JIVV-Rubix-Cube-SolverTests";
+			productReference = E51AAD0C1BB71B0D001E4931 /* JIVV-Rubix-Cube-SolverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E51AAD161BB71B0D001E4931 /* JIVV-Rubix-Cube-SolverUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E51AAD261BB71B0D001E4931 /* Build configuration list for PBXNativeTarget "JIVV-Rubix-Cube-SolverUITests" */;
+			buildPhases = (
+				E51AAD131BB71B0D001E4931 /* Sources */,
+				E51AAD141BB71B0D001E4931 /* Frameworks */,
+				E51AAD151BB71B0D001E4931 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E51AAD191BB71B0D001E4931 /* PBXTargetDependency */,
+			);
+			name = "JIVV-Rubix-Cube-SolverUITests";
+			productName = "JIVV-Rubix-Cube-SolverUITests";
+			productReference = E51AAD171BB71B0D001E4931 /* JIVV-Rubix-Cube-SolverUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E51AACED1BB71B0C001E4931 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = JRav;
+				TargetAttributes = {
+					E51AACF41BB71B0C001E4931 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					E51AAD0B1BB71B0D001E4931 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = E51AACF41BB71B0C001E4931;
+					};
+					E51AAD161BB71B0D001E4931 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = E51AACF41BB71B0C001E4931;
+					};
+				};
+			};
+			buildConfigurationList = E51AACF01BB71B0C001E4931 /* Build configuration list for PBXProject "JIVV-Rubix-Cube-Solver" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E51AACEC1BB71B0C001E4931;
+			productRefGroup = E51AACF61BB71B0D001E4931 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E51AACF41BB71B0C001E4931 /* JIVV-Rubix-Cube-Solver */,
+				E51AAD0B1BB71B0D001E4931 /* JIVV-Rubix-Cube-SolverTests */,
+				E51AAD161BB71B0D001E4931 /* JIVV-Rubix-Cube-SolverUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E51AACF31BB71B0C001E4931 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E51AAD061BB71B0D001E4931 /* LaunchScreen.storyboard in Resources */,
+				E51AAD031BB71B0D001E4931 /* Assets.xcassets in Resources */,
+				E51AACFE1BB71B0D001E4931 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E51AAD0A1BB71B0D001E4931 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E51AAD151BB71B0D001E4931 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E51AACF11BB71B0C001E4931 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E51AACFB1BB71B0D001E4931 /* ViewController.swift in Sources */,
+				E51AAD011BB71B0D001E4931 /* JIVV_Rubix_Cube_Solver.xcdatamodeld in Sources */,
+				E51AACF91BB71B0D001E4931 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E51AAD081BB71B0D001E4931 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E51AAD111BB71B0D001E4931 /* JIVV_Rubix_Cube_SolverTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E51AAD131BB71B0D001E4931 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E51AAD1C1BB71B0D001E4931 /* JIVV_Rubix_Cube_SolverUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E51AAD0E1BB71B0D001E4931 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E51AACF41BB71B0C001E4931 /* JIVV-Rubix-Cube-Solver */;
+			targetProxy = E51AAD0D1BB71B0D001E4931 /* PBXContainerItemProxy */;
+		};
+		E51AAD191BB71B0D001E4931 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E51AACF41BB71B0C001E4931 /* JIVV-Rubix-Cube-Solver */;
+			targetProxy = E51AAD181BB71B0D001E4931 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E51AACFC1BB71B0D001E4931 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E51AACFD1BB71B0D001E4931 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E51AAD041BB71B0D001E4931 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E51AAD051BB71B0D001E4931 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E51AAD1E1BB71B0D001E4931 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E51AAD1F1BB71B0D001E4931 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E51AAD211BB71B0D001E4931 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "JIVV-Rubix-Cube-Solver/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jrav.JIVV-Rubix-Cube-Solver";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E51AAD221BB71B0D001E4931 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "JIVV-Rubix-Cube-Solver/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jrav.JIVV-Rubix-Cube-Solver";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E51AAD241BB71B0D001E4931 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "JIVV-Rubix-Cube-SolverTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jrav.JIVV-Rubix-Cube-SolverTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JIVV-Rubix-Cube-Solver.app/JIVV-Rubix-Cube-Solver";
+			};
+			name = Debug;
+		};
+		E51AAD251BB71B0D001E4931 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "JIVV-Rubix-Cube-SolverTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jrav.JIVV-Rubix-Cube-SolverTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JIVV-Rubix-Cube-Solver.app/JIVV-Rubix-Cube-Solver";
+			};
+			name = Release;
+		};
+		E51AAD271BB71B0D001E4931 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "JIVV-Rubix-Cube-SolverUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jrav.JIVV-Rubix-Cube-SolverUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "JIVV-Rubix-Cube-Solver";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		E51AAD281BB71B0D001E4931 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "JIVV-Rubix-Cube-SolverUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jrav.JIVV-Rubix-Cube-SolverUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "JIVV-Rubix-Cube-Solver";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E51AACF01BB71B0C001E4931 /* Build configuration list for PBXProject "JIVV-Rubix-Cube-Solver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E51AAD1E1BB71B0D001E4931 /* Debug */,
+				E51AAD1F1BB71B0D001E4931 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E51AAD201BB71B0D001E4931 /* Build configuration list for PBXNativeTarget "JIVV-Rubix-Cube-Solver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E51AAD211BB71B0D001E4931 /* Debug */,
+				E51AAD221BB71B0D001E4931 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E51AAD231BB71B0D001E4931 /* Build configuration list for PBXNativeTarget "JIVV-Rubix-Cube-SolverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E51AAD241BB71B0D001E4931 /* Debug */,
+				E51AAD251BB71B0D001E4931 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E51AAD261BB71B0D001E4931 /* Build configuration list for PBXNativeTarget "JIVV-Rubix-Cube-SolverUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E51AAD271BB71B0D001E4931 /* Debug */,
+				E51AAD281BB71B0D001E4931 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E51AACFF1BB71B0D001E4931 /* JIVV_Rubix_Cube_Solver.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E51AAD001BB71B0D001E4931 /* JIVV_Rubix_Cube_Solver.xcdatamodel */,
+			);
+			currentVersion = E51AAD001BB71B0D001E4931 /* JIVV_Rubix_Cube_Solver.xcdatamodel */;
+			path = JIVV_Rubix_Cube_Solver.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E51AACED1BB71B0C001E4931 /* Project object */;
+}
