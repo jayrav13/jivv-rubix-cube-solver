@@ -8,13 +8,22 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+class ViewController: UIViewController, UIScrollViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     var scrollView : UIScrollView!
     var pageControl : UIPageControl!
     
     var next : UIButton!
     var previous : UIButton!
+    var takePicture : UIButton!
+    
+    var views : [UIImageView] = []
+    
+    var imagePicker : UIImagePickerController!
+    
+    var images : [UIImage] = [UIImage(), UIImage(), UIImage(), UIImage(), UIImage(), UIImage()]
+    
+    var doneMessage : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,13 +33,14 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         self.scrollView = UIScrollView(frame: CGRect(x: 0, y: 0, width: width, height: height-200))
         self.scrollView.delegate = self
         self.scrollView.pagingEnabled = true
-        self.scrollView.contentSize = CGSize(width: width * 3, height: height - 200)
-        self.scrollView.scrollEnabled = true
+        self.scrollView.contentSize = CGSize(width: width * 6, height: height - 200)
+        self.scrollView.scrollEnabled = false
+        self.scrollView.backgroundColor = UIColor.whiteColor()
         
         // set up page control
-        self.pageControl = UIPageControl(frame: CGRect(x: 0, y: height-100, width: width, height: 50))
+        self.pageControl = UIPageControl(frame: CGRect(x: 0, y: height-50, width: width, height: 25))
         self.pageControl.backgroundColor = UIColor.whiteColor()
-        self.pageControl.numberOfPages = 3
+        self.pageControl.numberOfPages = 6
         self.pageControl.currentPage = 0
         self.pageControl.tintColor = UIColor.redColor()
         self.pageControl.pageIndicatorTintColor = UIColor.grayColor()
@@ -40,8 +50,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         next = UIButton(type: UIButtonType.System)
         previous = UIButton(type: UIButtonType.System)
         
-        next.frame = CGRect(x: width/2, y: height - 150, width: width/2, height: 50)
-        previous.frame = CGRect(x: 0, y: height - 150, width: width/2, height: 50)
+        next.frame = CGRect(x: width/2, y: height - 100, width: width/2, height: 50)
+        previous.frame = CGRect(x: 0, y: height - 100, width: width/2, height: 50)
         
         next.addTarget(self, action: "scrollViewNext:", forControlEvents: UIControlEvents.TouchUpInside)
         previous.addTarget(self, action: "scrollViewPrevious:", forControlEvents: UIControlEvents.TouchUpInside)
@@ -49,22 +59,33 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         next.setTitle("Next", forState: UIControlState.Normal)
         previous.setTitle("Previous", forState: UIControlState.Normal)
         
+        // set up picture button
+        takePicture = UIButton(type: UIButtonType.System)
+        takePicture.frame = CGRect(x: 0, y: height - 150, width: width, height: 50)
+        takePicture.setTitle("Take Picture", forState: UIControlState.Normal)
+        takePicture.addTarget(self, action: "primaryActionSheet:", forControlEvents: UIControlEvents.TouchUpInside)
+        
+        // image picker
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+        imagePicker.cameraDevice = UIImagePickerControllerCameraDevice.Rear
+        imagePicker.showsCameraControls = true
+        
+        for x in 0...5 {
+            views.append(UIImageView())
+            views[x].contentMode = UIViewContentMode.ScaleAspectFit
+            views[x].frame = CGRect(x: width * CGFloat(x), y: 0, width: width, height: height-200)
+            views[x].backgroundColor = UIColor.grayColor()
+            scrollView.addSubview(views[x])
+        }
+        
         view.addSubview(next)
         view.addSubview(previous)
+        view.addSubview(takePicture)
         
         view.addSubview(scrollView)
         view.addSubview(pageControl)
-        
-        var view1 : UIView = UIView(frame: view.frame)
-        view1.backgroundColor = UIColor.redColor()
-        var view2 : UIView = UIView(frame: CGRect(x: width, y: 0, width: width, height: height))
-        view2.backgroundColor = UIColor.greenColor()
-        var view3 : UIView = UIView(frame: CGRect(x: width * 2, y: 0, width: width, height: height))
-        view3.backgroundColor = UIColor.blueColor()
-        
-        scrollView.addSubview(view1)
-        scrollView.addSubview(view2)
-        scrollView.addSubview(view3)
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,20 +94,91 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
 
     func scrollViewNext(sender: UIButton!) {
-        print(pageControl.currentPage)
-        if pageControl.currentPage < 2 {
+        if pageControl.currentPage < 5 {
             pageControl.currentPage = pageControl.currentPage + 1
             scrollView.setContentOffset(CGPoint(x: pageControl.currentPage * Int(width), y: 0), animated: true)
         }
     }
     
     func scrollViewPrevious(sender: UIButton!) {
-        print(pageControl.currentPage)
         if pageControl.currentPage > 0 {
             pageControl.currentPage = pageControl.currentPage  - 1
             scrollView.setContentOffset(CGPoint(x: pageControl.currentPage * Int(width), y: 0), animated: true)
         }
     }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        
+        views[pageControl.currentPage].image = image
+        imagePicker.dismissViewControllerAnimated(true) { () -> Void in
+            
+        }
+    }
+    
+    func primaryActionSheet(sender: UIButton!) {
+        
+        // alertController
+        let alertController : UIAlertController = UIAlertController(title: "Actions", message: "Select an action for this image.", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        let takePicture : UIAlertAction = UIAlertAction(title: "Take Image", style: UIAlertActionStyle.Default, handler: { (action : UIAlertAction) -> Void in
+            self.presentViewController(self.imagePicker, animated: true) { () -> Void in
+                    
+            }
+        })
+        
+        alertController.addAction(takePicture)
+        
+        let setSide : UIAlertAction = UIAlertAction(title: "Set Image Side", style: UIAlertActionStyle.Default) { (action : UIAlertAction) -> Void in
+            print("Set side.")
+        }
+        
+        alertController.addAction(setSide)
+        
+        if pageControl.currentPage == 5 {
+            
+            let done : UIAlertAction = UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: { (action : UIAlertAction) -> Void in
+                
+                // GO TO NEXT NAV CONTROLLER
+                
+            })
+            
+            alertController.addAction(done)
+            
+        }
+        
+        let cancel : UIAlertAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) { (action : UIAlertAction) -> Void in
+            
+        }
+        
+        alertController.addAction(cancel)
+        
+        presentViewController(alertController, animated: true) { () -> Void in
+            
+        }
 
+    }
+
+    func scrollViewDidEndScrollingAnimation(scrollView: UIScrollView) {
+        if pageControl.currentPage == 5 && !doneMessage {
+            
+            let alert : UIAlertController = UIAlertController(title: "Done", message: "When you are done, click the Done button into Actions menu.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let cancel : UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: { (action : UIAlertAction) -> Void in
+                alert.dismissViewControllerAnimated(true, completion: { () -> Void in
+                    
+                })
+            })
+            
+            alert.addAction(cancel)
+            
+            presentViewController(alert, animated: true, completion: { () -> Void in
+                
+            })
+            
+            doneMessage = !doneMessage
+        
+        }
+    }
+    
 }
 
