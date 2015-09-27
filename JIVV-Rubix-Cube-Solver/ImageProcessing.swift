@@ -21,11 +21,12 @@ class ImageProcessing : UIViewController {
         self.view.backgroundColor = UIColor.whiteColor()
     
         var modifiedImage : GPUImagePicture = GPUImagePicture(image: image, smoothlyScaleOutput: true)
-        var modifiedFilter : GPUImageSobelEdgeDetectionFilter = GPUImageSobelEdgeDetectionFilter()
+        var modifiedFilter : GPUImagePrewittEdgeDetectionFilter = GPUImagePrewittEdgeDetectionFilter()
         
         modifiedImage.addTarget(modifiedFilter)
         modifiedFilter.useNextFrameForImageCapture()
         modifiedImage.processImage()
+        modifiedFilter.forceProcessingAtSize(image.size)
         
         var finishedImage : UIImage = modifiedFilter.imageFromCurrentFramebuffer()
         

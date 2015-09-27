@@ -8,6 +8,8 @@
 
 import UIKit
 import GPUImage
+import Foundation
+import Darwin
 
 //On the top of your swift - found on StackOverflow
 extension UIImage {
@@ -70,6 +72,8 @@ class ImageList : UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         cell.textLabel?.text = sides[indexPath.row].text
         
+        cell.imageView?.image = images[indexPath.row].image
+        
         return cell
     }
     
@@ -123,16 +127,30 @@ class ImageList : UIViewController, UITableViewDelegate, UITableViewDataSource {
         let imageWidth = Int(image.size.width)
         let imageHeight = Int(image.size.height)
         
-        print(imageWidth)
+        var matrix : [[AnyObject?]] = []
         
-        var count = 0
+        for x in 0...2 {
+            for y in 0...2 {
+                matrix[x][y]!.addObject([0.0, 0.0, 0.0, 0.0])
+            }
+        }
         
-        var arr : [[CGFloat]] = []
+        var counts : [[Int]] = [ [0, 0, 0], [0, 0, 0], [0, 0, 0] ]
         
-        for x in 1...imageWidth {
-            for y in 1...imageHeight {
+        for x in 1...imageHeight {
+            for y in 1...imageWidth {
+                var horQuad = floor(Double(x / (imageWidth / 3)))
+                var verQuad = floor(Double(y / (imageHeight / 3)))
                 
-                let color : UIColor = image.getPixelColor(CGPoint(x: x, y: Int(imageHeight/3)))
+                if horQuad == 3.0 {
+                    horQuad = horQuad - 1
+                }
+                
+                if verQuad == 3.0 {
+                    verQuad = verQuad - 1
+                }
+                
+                let color : UIColor = image.getPixelColor(CGPoint(x: x, y: y))
                 
                 var r : CGFloat = 0
                 var g : CGFloat = 0
@@ -140,14 +158,28 @@ class ImageList : UIViewController, UITableViewDelegate, UITableViewDataSource {
                 var a : CGFloat = 0
                 
                 if color.getRed(&r, green: &g, blue: &b, alpha: &a) {
-                    print("\(r),\(g),\(b),\(a)")
+                    matrix[Int(horQuad)][Int(verQuad)]!.addObject([Double(r), Double(g), Double(b), Double(a)])
+                    counts[Int(horQuad)][Int(verQuad)] =  counts[Int(horQuad)][Int(verQuad)] + 1
                 }
-                
-                count++
-                print(count)
-                
             }
         }
+        
+        var averages : [[AnyObject]] = []
+        
+        for x in 0...2 {
+            for y in 0...2 {
+                averages[x][y] = 0
+                
+                for z in 0...4 {
+                    
+                    print(matrix[x][y])
+
+                }
+            }
+        }
+        
+        print(averages)
+        
     }
     
 }
