@@ -1,13 +1,16 @@
 PODS:
   - Alamofire (2.0.2)
+  - GPUImage (0.1.7)
   - SwiftyJSON (2.3.0)
 
 DEPENDENCIES:
   - Alamofire
+  - GPUImage
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   SwiftyJSON: 8d6b61a70277ef2a5d710d372e06e7e2d87fb9e4
 
 COCOAPODS: 0.38.2

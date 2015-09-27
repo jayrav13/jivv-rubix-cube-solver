@@ -228,10 +228,11 @@ class ViewController: UIViewController, UIScrollViewDelegate, UINavigationContro
             // GO TO NEXT NAV CONTROLLER
             
             let iList = ImageList()
-            iList.images = self.images
+            iList.images = self.views
             iList.sides = self.sideLabel
             
             let navController : UINavigationController = UINavigationController(rootViewController: iList)
+            
             self.presentViewController(navController, animated: true, completion: { () -> Void in
                 
             })

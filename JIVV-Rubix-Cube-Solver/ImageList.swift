@@ -7,20 +7,25 @@
 //
 
 import UIKit
+import GPUImage
 
 class ImageList : UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    // var test : GPUImagePicture = GPUImagePicture
     
     var tableView : UITableView!
     
     var dismissVC : UIBarButtonItem!
     var submit : UIBarButtonItem!
     
-    var images : [UIImage] = []
+    var images : [UIImageView] = []
     var sides : [UILabel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
+        
+        print(sides.count)
         
         self.title = "Images"
         
@@ -46,17 +51,23 @@ class ImageList : UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell")!
+        let cell : UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell")!
+        
+        cell.textLabel?.text = sides[indexPath.row].text
         
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        let ip : ImageProcessing = ImageProcessing()
+        ip.image = images[indexPath.row].image
+        self.navigationController?.pushViewController(ip, animated: true)
+        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return 6
     }
     
     func editImages(sender: UIButton!) {
@@ -65,8 +76,24 @@ class ImageList : UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 75
+    }
+    
     func solve(sender: UIButton!) {
-        print("Solving...")
+        var doneFlag : Int = 0
+        
+        for x in 0...self.sides.count - 1 {
+            if self.sides[x].text == "<select side>" {
+                doneFlag = 1
+                break
+            }
+        }
+        
+        if doneFlag == 0 {
+            
+        }
+        
     }
     
 }

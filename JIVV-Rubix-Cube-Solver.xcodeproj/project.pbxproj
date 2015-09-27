@@ -18,6 +18,7 @@
 		E51AAD1C1BB71B0D001E4931 /* JIVV_Rubix_Cube_SolverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51AAD1B1BB71B0D001E4931 /* JIVV_Rubix_Cube_SolverUITests.swift */; };
 		E564F1611BB773FB00435AD4 /* ImageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564F1601BB773FB00435AD4 /* ImageList.swift */; settings = {ASSET_TAGS = (); }; };
 		E564F1631BB77C7B00435AD4 /* SelectSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = E564F1621BB77C7B00435AD4 /* SelectSide.swift */; settings = {ASSET_TAGS = (); }; };
+		E5D9FA3D1BB7940900CB30F9 /* ImageProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D9FA3C1BB7940900CB30F9 /* ImageProcessing.swift */; settings = {ASSET_TAGS = (); }; };
 		E5E5217F1BB724F300C77B89 /* Standards.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E5217E1BB724F300C77B89 /* Standards.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		E51AAD1D1BB71B0D001E4931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E564F1601BB773FB00435AD4 /* ImageList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageList.swift; sourceTree = "<group>"; };
 		E564F1621BB77C7B00435AD4 /* SelectSide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectSide.swift; sourceTree = "<group>"; };
+		E5D9FA3C1BB7940900CB30F9 /* ImageProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessing.swift; sourceTree = "<group>"; };
 		E5E5217E1BB724F300C77B89 /* Standards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Standards.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +135,7 @@
 				E51AACFA1BB71B0D001E4931 /* ViewController.swift */,
 				E564F1621BB77C7B00435AD4 /* SelectSide.swift */,
 				E564F1601BB773FB00435AD4 /* ImageList.swift */,
+				E5D9FA3C1BB7940900CB30F9 /* ImageProcessing.swift */,
 				E5E5217E1BB724F300C77B89 /* Standards.swift */,
 				E51AACFC1BB71B0D001E4931 /* Main.storyboard */,
 				E51AAD021BB71B0D001E4931 /* Assets.xcassets */,
@@ -345,6 +348,7 @@
 				E51AACFB1BB71B0D001E4931 /* ViewController.swift in Sources */,
 				E51AAD011BB71B0D001E4931 /* JIVV_Rubix_Cube_Solver.xcdatamodeld in Sources */,
 				E564F1631BB77C7B00435AD4 /* SelectSide.swift in Sources */,
+				E5D9FA3D1BB7940900CB30F9 /* ImageProcessing.swift in Sources */,
 				E5E5217F1BB724F300C77B89 /* Standards.swift in Sources */,
 				E51AACF91BB71B0D001E4931 /* AppDelegate.swift in Sources */,
 				E564F1611BB773FB00435AD4 /* ImageList.swift in Sources */,
