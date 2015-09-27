@@ -9,9 +9,24 @@
 import UIKit
 import GPUImage
 
+//On the top of your swift - found on StackOverflow
+extension UIImage {
+    func getPixelColor(pos: CGPoint) -> UIColor {
+        let pixelData = CGDataProviderCopyData(CGImageGetDataProvider(self.CGImage))
+        let data: UnsafePointer<UInt8> = CFDataGetBytePtr(pixelData)
+        
+        let pixelInfo: Int = ((Int(self.size.width) * Int(pos.y)) + Int(pos.x)) * 4
+        
+        let r = CGFloat(data[pixelInfo]) / CGFloat(255.0)
+        let g = CGFloat(data[pixelInfo+1]) / CGFloat(255.0)
+        let b = CGFloat(data[pixelInfo+2]) / CGFloat(255.0)
+        let a = CGFloat(data[pixelInfo+3]) / CGFloat(255.0)
+        
+        return UIColor(red: r, green: g, blue: b, alpha: a)
+    }
+}
+
 class ImageList : UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    // var test : GPUImagePicture = GPUImagePicture
     
     var tableView : UITableView!
     
@@ -25,7 +40,7 @@ class ImageList : UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
         
-        print(sides.count)
+        findEdges(images[0].image!)
         
         self.title = "Images"
         
@@ -94,6 +109,45 @@ class ImageList : UIViewController, UITableViewDelegate, UITableViewDataSource {
             
         }
         
+    }
+    
+    // processed image
+    func findEdges(image : UIImage) {
+        
+        var newSize : CGSize = CGSizeMake(244, 244.0)
+        UIGraphicsBeginImageContext(newSize)
+        image.drawInRect(CGRectMake(0, 0, newSize.width, newSize.height))
+        var image : UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        let imageWidth = Int(image.size.width)
+        let imageHeight = Int(image.size.height)
+        
+        print(imageWidth)
+        
+        var count = 0
+        
+        var arr : [[CGFloat]] = []
+        
+        for x in 1...imageWidth {
+            for y in 1...imageHeight {
+                
+                let color : UIColor = image.getPixelColor(CGPoint(x: x, y: Int(imageHeight/3)))
+                
+                var r : CGFloat = 0
+                var g : CGFloat = 0
+                var b : CGFloat = 0
+                var a : CGFloat = 0
+                
+                if color.getRed(&r, green: &g, blue: &b, alpha: &a) {
+                    print("\(r),\(g),\(b),\(a)")
+                }
+                
+                count++
+                print(count)
+                
+            }
+        }
     }
     
 }
