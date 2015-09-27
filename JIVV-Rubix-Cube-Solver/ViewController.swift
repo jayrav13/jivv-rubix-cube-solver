@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIScrollViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class ViewController: UIViewController, UIScrollViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, SelectSideDelegate {
 
     var scrollView : UIScrollView!
     var pageControl : UIPageControl!
@@ -24,6 +24,8 @@ class ViewController: UIViewController, UIScrollViewDelegate, UINavigationContro
     var images : [UIImage] = [UIImage(), UIImage(), UIImage(), UIImage(), UIImage(), UIImage()]
     
     var doneMessage : Bool = false
+    
+    var sideLabel : [UILabel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +80,14 @@ class ViewController: UIViewController, UIScrollViewDelegate, UINavigationContro
             views[x].frame = CGRect(x: width * CGFloat(x), y: 0, width: width, height: height-200)
             views[x].backgroundColor = UIColor.grayColor()
             scrollView.addSubview(views[x])
+            
+            sideLabel.append(UILabel())
+            sideLabel[x].frame = CGRect(x: width * CGFloat(x), y: height-225, width: width, height: 25)
+            sideLabel[x].backgroundColor = UIColor.blackColor()
+            sideLabel[x].textColor = UIColor.whiteColor()
+            sideLabel[x].textAlignment = NSTextAlignment.Center
+            sideLabel[x].text = "<select side>"
+            scrollView.addSubview(sideLabel[x])
         }
         
         view.addSubview(next)
@@ -129,16 +139,22 @@ class ViewController: UIViewController, UIScrollViewDelegate, UINavigationContro
         alertController.addAction(takePicture)
         
         let setSide : UIAlertAction = UIAlertAction(title: "Set Image Side", style: UIAlertActionStyle.Default) { (action : UIAlertAction) -> Void in
-            print("Set side.")
+            
+            let selectSide = SelectSide()
+            selectSide.delegate = self
+            let sSVC = UINavigationController(rootViewController: selectSide)
+            self.presentViewController(sSVC, animated: true, completion: { () -> Void in
+                
+            })
+            
         }
         
         alertController.addAction(setSide)
         
         if pageControl.currentPage == 5 {
-            
             let done : UIAlertAction = UIAlertAction(title: "Done", style: UIAlertActionStyle.Default, handler: { (action : UIAlertAction) -> Void in
                 
-                // GO TO NEXT NAV CONTROLLER
+                self.checkImageStates()
                 
             })
             
@@ -178,6 +194,53 @@ class ViewController: UIViewController, UIScrollViewDelegate, UINavigationContro
             doneMessage = !doneMessage
         
         }
+    }
+    
+    func checkImageStates() {
+        
+        var okFlag = 0
+        
+        for x in 0...self.views.count - 1 {
+            if self.views[x].image == nil {
+                okFlag = okFlag + 1
+                break
+            }
+        }
+        
+        
+        if okFlag == 1 && okFlag == 0 {
+            let alert : UIAlertController = UIAlertController(title: "Error", message: "Be sure to take all 6 images!.", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            let cancel : UIAlertAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: { (action : UIAlertAction) -> Void in
+                alert.dismissViewControllerAnimated(true, completion: { () -> Void in
+                    
+                })
+            })
+            
+            alert.addAction(cancel)
+            
+            self.presentViewController(alert, animated: true, completion: { () -> Void in
+                
+            })
+            
+        }
+        else {
+            // GO TO NEXT NAV CONTROLLER
+            
+            let iList = ImageList()
+            iList.images = self.images
+            iList.sides = self.sideLabel
+            
+            let navController : UINavigationController = UINavigationController(rootViewController: iList)
+            self.presentViewController(navController, animated: true, completion: { () -> Void in
+                
+            })
+            
+        }
+    }
+    
+    func controller(controller: SelectSide, selectedElement: String) {
+        sideLabel[pageControl.currentPage].text = selectedElement
     }
     
 }
