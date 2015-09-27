@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BDD10618B103A81687D40844 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A663C1DF33906A6134EBE11 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E50E899F1BB8477400E3E44B /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50E899E1BB8477400E3E44B /* Solution.swift */; settings = {ASSET_TAGS = (); }; };
 		E51AACF91BB71B0D001E4931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51AACF81BB71B0D001E4931 /* AppDelegate.swift */; };
 		E51AACFB1BB71B0D001E4931 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E51AACFA1BB71B0D001E4931 /* ViewController.swift */; };
 		E51AACFE1BB71B0D001E4931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E51AACFC1BB71B0D001E4931 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		6A663C1DF33906A6134EBE11 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB5F6EF3714C2E46AE60C11 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A95A0FBA1928212025E6AB73 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E50E899E1BB8477400E3E44B /* Solution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
 		E51AACF51BB71B0D001E4931 /* JIVV-Rubix-Cube-Solver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JIVV-Rubix-Cube-Solver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E51AACF81BB71B0D001E4931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E51AACFA1BB71B0D001E4931 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				E51AACF81BB71B0D001E4931 /* AppDelegate.swift */,
 				E51AACFA1BB71B0D001E4931 /* ViewController.swift */,
 				E564F1621BB77C7B00435AD4 /* SelectSide.swift */,
+				E50E899E1BB8477400E3E44B /* Solution.swift */,
 				E564F1601BB773FB00435AD4 /* ImageList.swift */,
 				E5D9FA3C1BB7940900CB30F9 /* ImageProcessing.swift */,
 				E5E5217E1BB724F300C77B89 /* Standards.swift */,
@@ -351,6 +354,7 @@
 				E5D9FA3D1BB7940900CB30F9 /* ImageProcessing.swift in Sources */,
 				E5E5217F1BB724F300C77B89 /* Standards.swift in Sources */,
 				E51AACF91BB71B0D001E4931 /* AppDelegate.swift in Sources */,
+				E50E899F1BB8477400E3E44B /* Solution.swift in Sources */,
 				E564F1611BB773FB00435AD4 /* ImageList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

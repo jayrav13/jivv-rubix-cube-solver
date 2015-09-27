@@ -10,6 +10,8 @@ import UIKit
 import GPUImage
 import Foundation
 import Darwin
+import Alamofire
+import SwiftyJSON
 
 //On the top of your swift - found on StackOverflow
 extension UIImage {
@@ -41,11 +43,6 @@ class ImageList : UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
-        
-        for x in 0...images.count - 1 {
-            print(sides[x].text)
-            findEdges(images[x].image!)
-        }
         
         self.title = "Images"
         
@@ -103,19 +100,13 @@ class ImageList : UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func solve(sender: UIButton!) {
-        var doneFlag : Int = 0
-        
-        for x in 0...self.sides.count - 1 {
-            if self.sides[x].text == "<select side>" {
-                doneFlag = 1
-                break
-            }
+        for x in 0...images.count - 1 {
+            print(sides[x].text)
+            findEdges(images[x].image!)
         }
-        
-        if doneFlag == 0 {
-            
-        }
-        
+        let soln : Solution = Solution()
+        soln.response = ["TopCW"]
+        self.navigationController?.pushViewController(soln, animated: true)
     }
     
     // processed image
@@ -201,7 +192,5 @@ class ImageList : UIViewController, UITableViewDelegate, UITableViewDataSource {
                 }
             }
         }
-        
     }
-    
 }
