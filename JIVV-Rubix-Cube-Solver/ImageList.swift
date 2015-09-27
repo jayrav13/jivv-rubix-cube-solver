@@ -173,12 +173,33 @@ class ImageList : UIViewController, UITableViewDelegate, UITableViewDataSource {
                 for z in 0...3 {
                     averages[x][y][z] = averages[x][y][z] / Double(counts[x][y])
                 }
-                print(averages[x][y])
             }
         }
         
         for elem in averages {
-            
+            for color in elem {
+                if color[0] > 0.50 && color[1] > 0.5 && color[2] > 0.5 {
+                    print("White")
+                }
+                else if color[0] < 0.3 && color[1] < 0.3 && color[2] > 0.7 {
+                    print("Red")
+                }
+                else if color[0] < 0.2 && color[1] >  0.5 && color[2] > 0.6 {
+                    print("Yellow")
+                }
+                else if color[0] < 0.2 && color[2] > 0.7 {
+                    print("Orange")
+                }
+                else if color[0] < 0.4 && color[1] > 0.5 && color[2] < 0.4 {
+                    print("Green")
+                }
+                else if color[0] < 0.6 && color[0] > 0.4 && color[1] < 0.6 && color[1] > 0.3 {
+                    print("Blue")
+                }
+                else {
+                    print("Not found.")
+                }
+            }
         }
         
     }
