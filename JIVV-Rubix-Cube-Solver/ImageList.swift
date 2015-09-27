@@ -42,7 +42,10 @@ class ImageList : UIViewController, UITableViewDelegate, UITableViewDataSource {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
         
-        findEdges(images[0].image!)
+        for x in 0...images.count - 1 {
+            print(sides[x].text)
+            findEdges(images[x].image!)
+        }
         
         self.title = "Images"
         
@@ -127,15 +130,8 @@ class ImageList : UIViewController, UITableViewDelegate, UITableViewDataSource {
         let imageWidth = Int(image.size.width)
         let imageHeight = Int(image.size.height)
         
-        var matrix : [[AnyObject?]] = []
-        
-        for x in 0...2 {
-            for y in 0...2 {
-                matrix[x][y]!.addObject([0.0, 0.0, 0.0, 0.0])
-            }
-        }
-        
-        var counts : [[Int]] = [ [0, 0, 0], [0, 0, 0], [0, 0, 0] ]
+        var matrix : [[Double]] = [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]
+        var counts : [[Int]] = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
         
         for x in 1...imageHeight {
             for y in 1...imageWidth {
@@ -158,27 +154,32 @@ class ImageList : UIViewController, UITableViewDelegate, UITableViewDataSource {
                 var a : CGFloat = 0
                 
                 if color.getRed(&r, green: &g, blue: &b, alpha: &a) {
-                    matrix[Int(horQuad)][Int(verQuad)]!.addObject([Double(r), Double(g), Double(b), Double(a)])
-                    counts[Int(horQuad)][Int(verQuad)] =  counts[Int(horQuad)][Int(verQuad)] + 1
+                    matrix.append([Double(r), Double(g), Double(b), Double(a), Double(horQuad), Double(verQuad)])
+                    counts[Int(horQuad)][Int(verQuad)] += 1
                 }
             }
         }
         
-        var averages : [[AnyObject]] = []
+        var averages : [[[Double]]] = [[[0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0]], [[0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0]], [[0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0]]]
+        
+        for elem in matrix {
+            for x in 0...3 {
+                averages[Int(elem[4])][Int(elem[5])][x] += elem[x]
+            }
+        }
         
         for x in 0...2 {
             for y in 0...2 {
-                averages[x][y] = 0
-                
-                for z in 0...4 {
-                    
-                    print(matrix[x][y])
-
+                for z in 0...3 {
+                    averages[x][y][z] = averages[x][y][z] / Double(counts[x][y])
                 }
+                print(averages[x][y])
             }
         }
         
-        print(averages)
+        for elem in averages {
+            
+        }
         
     }
     
